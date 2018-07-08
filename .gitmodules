@@ -1,0 +1,3 @@
+[submodule "flyway"]
+	path = flyway
+	url = https://github.com/jalilag/flyway.git

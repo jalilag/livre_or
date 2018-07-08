@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+		{
+			"auto_complete": true,
+			"auto_complete_triggers":
+			[
+				{
+				  "characters": ".",
+				  "selector": "source.js"
+				}
+			],
+			"ensure_newline_at_eof_on_save": true,
+			"folder_exclude_patterns":
+			[
+			"node_modules",
+			".git"
+			],
+			"highlight_line": true,
+			"highlight_modified_tabs": true,
+			"tab_size": 2,
+			"trim_trailing_white_space_on_save": true
+		}
+}

@@ -1,0 +1,19 @@
+extends base
+
+block content
+	if locals.flash
+		h1= locals.flash.error
+	form(id="formid" action="/" method="post") Contact
+		table
+			tr
+				td login:
+				td
+					input(name="login" type="text")
+			tr
+				td Mot de passe
+				td
+					input(name="password" type="password" required)
+			tr
+				td
+				td
+					button(type="submit") Envoyer

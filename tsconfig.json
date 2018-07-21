@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "./build",
+        "moduleResolution": "node",
+        "sourceMap" : true,
+        "baseUrl" : ".",
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "/",
+            ]
+        },
+    },
+    "exclude" : [
+        "./build",
+        "./node_modules",
+        "./flyway",
+        "./sql_migration",
+        "./views"
+    ]
+}

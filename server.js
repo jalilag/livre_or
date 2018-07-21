@@ -1,7 +1,10 @@
 express = require('express');
 app = express();
 bodyParser = require("body-parser");
-session = require("express-session")
+session = require("express-session");
+pg = require('pg');
+
+
 
 app.set('views','./views');
 app.set('view engine','pug');
@@ -28,8 +31,14 @@ app.get('/' ,(request,response) => {
 app.post('/',(request,response,next) =>{
 	if (request.body.login === undefined || request.body.login === '') {
 		request.flash("error","il y a une erreur");
+		response.redirect('/');
+	} else {
+		connect = require('./lib/dbconnect')
+		connect.query('SELECT NOW()', (err, res) => {
+	  		console.log(res.rows)
+			response.redirect('/');
+	  	})
 	}
-	response.redirect('/');
-});
+})
 
 app.listen(8080);

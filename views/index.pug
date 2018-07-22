@@ -1,19 +1,26 @@
 extends base
 
 block content
-	if locals.flash
-		h1= locals.flash.error
-	form(id="formid" action="/" method="post") Contact
-		table
-			tr
-				td login:
-				td
-					input(name="login" type="text")
-			tr
-				td Mot de passe
-				td
-					input(name="password" type="password" required)
-			tr
-				td
-				td
-					button(type="submit") Envoyer
+	div(class="container-fluid fill-height-100")
+		div(class="row justify-content-center align-items-end fill-height-50")
+			div(class="col-xl-auto ")
+				div
+					form(id="formid" action="/" method="post")
+						table(class="table")
+							thead
+								tr
+									th(colspan=2)
+										h1 Connection
+							tbody
+								tr
+									th Login :
+									td
+										input(name="login" type="text")
+								tr
+									th Mot de passe :
+									td
+										input(name="password" type="password" required)
+								tr
+									td
+									td
+										button(class="btn btn-primary" type="submit") Envoyer

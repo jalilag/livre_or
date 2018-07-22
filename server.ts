@@ -23,12 +23,7 @@ class Server {
 	}
 
 	private load_routes() :void {
-		this.app.use('/index',routes)
-		// // this.app.get()
-		// this.app.get('/' ,(request,response) => {
-		// 	console.log(response.locals)
-		// 	response.render('index',{title:"kaka",message:"kaka2"});
-		// })
+		this.app.use('/',routes)
 	}
 
 	public start_server(port?:number) {
